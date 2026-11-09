@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>{{FULL_NAME}} - Resume</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  body { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 10pt; line-height: 1.4; color: #1a1a1a; margin: 0; }
+  h1 { font-size: 20pt; margin: 0 0 2px; letter-spacing: .5px; }
+  .contact { color: #444; font-size: 9pt; margin-bottom: 10px; }
+  .contact a { color: inherit; text-decoration: none; }
+  h2 { font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #1a1a1a; padding-bottom: 2px; margin: 12px 0 6px; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; }
+  .row strong { font-size: 10.5pt; }
+  .muted { color: #555; font-size: 9pt; }
+  ul { margin: 3px 0 6px 16px; padding: 0; }
+  li { margin-bottom: 2px; }
+  .skills p { margin: 2px 0; }
+</style>
+</head>
+<body>
+  <h1>{{FULL_NAME}}</h1>
+  <div class="contact">{{CITY}} | {{PHONE}} | <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> | <a href="{{LINKEDIN_URL}}">LinkedIn</a> | <a href="{{GITHUB_URL}}">GitHub</a></div>
+
+  <h2>Summary</h2>
+  <p>{{SUMMARY: 2 lines, tailored to the role}}</p>
+
+  <h2>Skills</h2>
+  <div class="skills">
+    <p><strong>Languages:</strong> {{LANGUAGES}}</p>
+    <p><strong>Frameworks &amp; tools:</strong> {{FRAMEWORKS_TOOLS}}</p>
+  </div>
+
+  <h2>Experience</h2>
+  <!-- Repeat this block for each role -->
+  <div class="row"><strong>{{JOB_TITLE}}, {{COMPANY}}</strong><span class="muted">{{START}} - {{END}}</span></div>
+  <ul>
+    <li>{{Achievement with a number: did X, using Y, resulting in Z}}</li>
+    <li>{{Achievement}}</li>
+  </ul>
+
+  <h2>Projects</h2>
+  <div class="row"><strong>{{PROJECT_NAME}}</strong><span class="muted">{{TECH}}</span></div>
+  <ul><li>{{What it does and the outcome}}</li></ul>
+
+  <h2>Education</h2>
+  <div class="row"><strong>{{DEGREE}}, {{SCHOOL}}</strong><span class="muted">{{YEAR}}</span></div>
+</body>
+</html>

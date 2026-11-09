@@ -1,0 +1,16 @@
+{
+  "name": "ai-job-hunter",
+  "version": "1.0.0",
+  "description": "Small Node.js tools for a team of AI agents that hunt jobs, research companies, tailor resumes and prep interviews.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20.12" },
+  "scripts": {
+    "search": "node scripts/search-jobs.mjs",
+    "check": "node scripts/check-posting.mjs",
+    "tracker": "node scripts/tracker.mjs"
+  },
+  "dependencies": {
+    "puppeteer": "^23.11.1"
+  }
+}

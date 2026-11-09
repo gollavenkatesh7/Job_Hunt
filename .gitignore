@@ -1,0 +1,7 @@
+node_modules/
+.env
+tracker.json
+jobs/*
+!jobs/.gitkeep
+.DS_Store
+profile.md
